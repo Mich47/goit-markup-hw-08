@@ -16,6 +16,8 @@
   color: var(--social-link-color);
   border-radius: 50%;
 
+  transition: color var(--animation), background-color var(--animation);
+
   &:hover,
   &:focus {
     color: var(--main-light-color);

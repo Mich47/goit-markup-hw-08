@@ -1,6 +1,8 @@
-/* Portfolio Styles */
+/* Portfolio Section Styles */
 
 .portfolio {
+  @include section();
+
   &__filter-list {
     justify-content: center;
     gap: 8px;

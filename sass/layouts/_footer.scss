@@ -1,8 +1,7 @@
 /* Footer Styles*/
 
 .footer {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  @include section(60px);
   background-color: var(--footer-background-color);
 
   &__container {
@@ -36,11 +35,14 @@
 }
 
 .footer__address-link {
-  font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+  font-style: normal;
+
   color: var(--address-link-color);
+
+  transition: color var(--animation);
 
   &:hover,
   &:focus {

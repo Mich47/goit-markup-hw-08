@@ -1,6 +1,8 @@
-/* Features Styles*/
+/* Features Section Styles*/
 
 .features {
+  @include section();
+
   &__thumb {
     margin-bottom: 30px;
     padding: 24px 100px;

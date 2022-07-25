@@ -1,10 +1,9 @@
-/* Hero Styles */
+/* Hero Section Styles */
 
 .hero {
-  padding-top: 200px;
-  padding-bottom: 200px;
+  @include section(200px, 200px);
+
   max-width: 1600px;
-  margin: 0 auto;
 
   color: var(--main-light-color);
   background-color: var(--footer-background-color);

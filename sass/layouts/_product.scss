@@ -1,7 +1,7 @@
-/* Product Styles */
+/* Product Section Styles */
 
 .product {
-  padding-top: 0;
+  @include section(0, default);
 
   &__title {
     margin-bottom: 50px;

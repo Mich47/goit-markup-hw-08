@@ -1,38 +1,37 @@
-@import './utils/fonts';
-@import './utils/variables';
-@import './base/global';
+// Fonts
+@import './base/fonts';
+
+// Utils
+@import './utils/modern-normalize';
 @import './utils/hidden';
+@import './utils/variables';
+@import './utils/mixin';
 
-//Index.html
+// Base
+@import './base/base';
+@import './base/reset';
+@import './base/typography';
+@import './base/grid';
 
+// Components
+@import './components/backdrop';
 @import './components/button';
-@import './components/link';
-@import './components/section';
-@import './layouts/grid';
-@import './components/title';
-@import './components/subtitle';
-@import './components/form';
 @import './components/checkbox';
-@import './layouts/container';
-
-@import './layouts/header';
-@import './components/logo';
-@import './components/hero';
-@import './components/feature';
-@import './components/product';
-@import './components/team';
-@import './components/team-card';
-@import './components/social';
-@import './components/client';
 @import './components/client-link';
-@import './layouts/footer';
-
-//Modal
-
-@import './layouts/backdrop';
+@import './components/container';
+@import './components/form';
+@import './components/logo';
 @import './components/modal';
-
-//Portfolio.html
-
-@import './components/portfolio';
 @import './components/project-card';
+@import './components/social';
+@import './components/team-card';
+
+// Layouts
+@import './layouts/header';
+@import './layouts/footer';
+@import './layouts/hero';
+@import './layouts/feature';
+@import './layouts/product';
+@import './layouts/team';
+@import './layouts/client';
+@import './layouts/portfolio';

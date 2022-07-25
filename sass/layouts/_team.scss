@@ -1,6 +1,7 @@
-/* Team Styles */
+/* Team Section Styles */
 
 .team {
+  @include section();
   background-color: var(--section-background-color);
 
   &__title {

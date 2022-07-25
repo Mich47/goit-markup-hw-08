@@ -1,13 +1,4 @@
-/* Global Styles */
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: var(--main-font);
-  color: var(--main-font-color);
-}
+/* Reset Styles */
 
 h1,
 h2,
@@ -34,4 +25,13 @@ img {
 
 .icon {
   fill: currentColor;
+}
+
+.link {
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    outline-color: var(--main-accent-color);
+  }
 }

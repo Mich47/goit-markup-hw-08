@@ -101,6 +101,7 @@
 }
 
 .form__terms-link {
+  display: inline-block;
   font-weight: 400;
   text-decoration: underline;
   color: var(--main-accent-color);
