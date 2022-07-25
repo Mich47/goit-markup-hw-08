@@ -1,0 +1,31 @@
+/* Hero Styles */
+
+.hero {
+  padding-top: 200px;
+  padding-bottom: 200px;
+  max-width: 1600px;
+  margin: 0 auto;
+
+  color: var(--main-light-color);
+  background-color: var(--footer-background-color);
+  background-image: linear-gradient(var(--hero-gradient-color), var(--hero-gradient-color)),
+    url('../images/hero/background_hero_img.jpg');
+  background-position: center;
+  background-size: cover;
+
+  &__container {
+    max-width: 696px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+}

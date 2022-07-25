@@ -1,0 +1,23 @@
+/* Client Link  Styles */
+
+.client-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 170px;
+  min-height: 92px;
+
+  color: var(--social-link-color);
+  border: 1px solid;
+  border-color: var(--social-link-color);
+  border-radius: 4px;
+
+  transition: color var(--animation), border-color var(--animation);
+
+  &:hover,
+  &:focus {
+    color: var(--main-accent-color);
+    border: 1px solid;
+    border-color: var(--main-accent-color);
+  }
+}

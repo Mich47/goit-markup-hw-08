@@ -1,0 +1,30 @@
+/* Product Styles */
+
+.product {
+  padding-top: 0;
+
+  &__title {
+    margin-bottom: 50px;
+  }
+
+  &__subtitle-overlay {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 27px 0;
+    background-color: var(--product-subtitle-background);
+  }
+
+  &__subtitle {
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+
+  &__subtitle {
+    text-align: center;
+    color: var(--main-light-color);
+  }
+}

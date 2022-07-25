@@ -1,0 +1,10 @@
+/* Grid Styles */
+
+.grid {
+  gap: var(--grid-indent);
+  flex-wrap: wrap;
+
+  &__item {
+    position: relative;
+  }
+}

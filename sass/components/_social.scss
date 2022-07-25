@@ -1,0 +1,24 @@
+/* Social Link Styles */
+
+.social {
+  &__list {
+    justify-content: center;
+    gap: 10px;
+  }
+}
+
+.social__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+
+  color: var(--social-link-color);
+  border-radius: 50%;
+
+  &:hover,
+  &:focus {
+    color: var(--main-light-color);
+    background-color: var(--btn-background-color);
+  }
+}

@@ -1,0 +1,25 @@
+/* Features Styles*/
+
+.features {
+  &__thumb {
+    margin-bottom: 30px;
+    padding: 24px 100px;
+    background-color: var(--section-background-color);
+    border-radius: 4px;
+  }
+
+  &__subtitle {
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+
+  &__desc {
+    max-width: 270px;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: var(--second-font-color);
+  }
+}
