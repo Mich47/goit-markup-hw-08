@@ -1,11 +1,34 @@
 /* Features Section Styles*/
 
 .features {
-  @include section();
+  @include section(60px);
+  min-width: 320px;
+  max-width: 480px;
+
+  @include mq(tab) {
+    max-width: 768px;
+  }
+
+  @include mq(desk) {
+    @include section(default);
+    max-width: 1200px;
+  }
+
+  &__item {
+    @include mq(tab) {
+      --grid-items: 2;
+    }
+
+    @include mq(desk) {
+      --grid-items: 4;
+    }
+  }
 
   &__thumb {
+    display: flex;
+    justify-content: center;
     margin-bottom: 30px;
-    padding: 24px 100px;
+    padding: 25px;
     background-color: var(--section-background-color);
     border-radius: 4px;
   }
@@ -15,10 +38,13 @@
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
+
+    @include mq(mob-only) {
+      text-align: center;
+    }
   }
 
   &__desc {
-    max-width: 270px;
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;

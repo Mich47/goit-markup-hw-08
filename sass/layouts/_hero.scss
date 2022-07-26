@@ -59,9 +59,13 @@
   }
 
   &__container {
-    max-width: 696px;
+    max-width: 360px;
     margin: 0 auto;
     text-align: center;
+
+    @media screen and (min-width: 1200px) {
+      max-width: 696px;
+    }
   }
 
   &__title {
