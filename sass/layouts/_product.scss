@@ -2,6 +2,15 @@
 
 .product {
   @include section(0, default);
+  display: none;
+
+  @include mq(desk) {
+    display: block;
+  }
+
+  &__item {
+    --grid-items: 3;
+  }
 
   &__title {
     margin-bottom: 50px;

@@ -1057,6 +1057,15 @@ img {
   padding-top: 0;
   padding-bottom: 94px;
   margin: 0 auto;
+  display: none;
+}
+@media screen and (min-width: 1200px) {
+  .product {
+    display: block;
+  }
+}
+.product__item {
+  --grid-items: 3;
 }
 .product__title {
   margin-bottom: 50px;
