@@ -1,10 +1,28 @@
 /* Team Section Styles */
 
 .team {
-  @include section();
+  @include section(60px);
   background-color: var(--section-background-color);
 
-  &__title {
-    margin-bottom: 50px;
+  @include mq(desk) {
+    @include section(default);
+  }
+}
+
+.team__item {
+  @include mq(tab) {
+    --grid-items: 2;
+  }
+
+  @include mq(desk) {
+    --grid-items: 4;
+  }
+}
+
+.team__title {
+  margin-bottom: 50px;
+
+  @include mq(desk) {
+    font-size: 36px;
   }
 }

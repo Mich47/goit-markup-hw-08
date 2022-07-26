@@ -3,13 +3,8 @@
 .client {
   @include section(60px);
 
-  @include mq(tab) {
-    max-width: 768px;
-  }
-
   @include mq(desk) {
     @include section(default);
-    max-width: 1200px;
   }
 }
 
