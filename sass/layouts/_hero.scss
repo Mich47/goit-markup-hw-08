@@ -3,8 +3,6 @@
 .hero {
   @include section(118px, 118px);
   color: var(--main-light-color);
-  min-width: 320px;
-  max-width: 480px;
 
   background-position: center;
   background-size: cover;

@@ -797,6 +797,8 @@ img {
 /* Header Styles */
 .header {
   margin: 0 auto;
+  min-width: 320px;
+  max-width: 480px;
   border-bottom: 1px solid var(--header-border-color);
 }
 .header__list {
@@ -841,6 +843,8 @@ img {
   padding-top: 60px;
   padding-bottom: 60px;
   margin: 0 auto;
+  min-width: 320px;
+  max-width: 480px;
   background-color: var(--footer-background-color);
 }
 .footer__container {
@@ -916,9 +920,9 @@ img {
   padding-top: 118px;
   padding-bottom: 118px;
   margin: 0 auto;
-  color: var(--main-light-color);
   min-width: 320px;
   max-width: 480px;
+  color: var(--main-light-color);
   background-position: center;
   background-size: cover;
   background-color: var(--footer-background-color);
@@ -955,6 +959,8 @@ img {
     padding-top: 200px;
     padding-bottom: 200px;
     margin: 0 auto;
+    min-width: 320px;
+    max-width: 480px;
     max-width: 1600px;
     background-image: linear-gradient(var(--hero-gradient-color), var(--hero-gradient-color)), url("../images/hero/desk/hero_background.jpg");
   }
@@ -1013,6 +1019,8 @@ img {
     padding-top: 94px;
     padding-bottom: 94px;
     margin: 0 auto;
+    min-width: 320px;
+    max-width: 480px;
     max-width: 1200px;
   }
 }
@@ -1057,6 +1065,9 @@ img {
   padding-top: 0;
   padding-bottom: 94px;
   margin: 0 auto;
+  min-width: 320px;
+  max-width: 480px;
+  max-width: 1200px;
   display: none;
 }
 @media screen and (min-width: 1200px) {
@@ -1094,6 +1105,8 @@ img {
   padding-top: 94px;
   padding-bottom: 94px;
   margin: 0 auto;
+  min-width: 320px;
+  max-width: 480px;
   background-color: var(--section-background-color);
 }
 .team__title {
@@ -1102,24 +1115,58 @@ img {
 
 /* Client Section Styles */
 .client {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   margin: 0 auto;
+  min-width: 320px;
+  max-width: 480px;
 }
+@media screen and (min-width: 768px) {
+  .client {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .client {
+    padding-top: 94px;
+    padding-bottom: 94px;
+    margin: 0 auto;
+    min-width: 320px;
+    max-width: 480px;
+    max-width: 1200px;
+  }
+}
+
 .client__title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
-.client__list {
-  justify-content: space-between;
-  align-items: center;
+@media screen and (min-width: 1200px) {
+  .client__title {
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (min-width: 340px) {
+  .client__item {
+    --grid-items: 2;
+  }
+}
+@media screen and (min-width: 768px) {
+  .client__item {
+    --grid-items: 3;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .client__item {
+    --grid-items: 6;
+  }
 }
 
 .client__link {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 170px;
-  min-height: 92px;
+  padding: 15px;
   color: var(--social-link-color);
   border: 1px solid;
   border-color: var(--social-link-color);
@@ -1137,6 +1184,8 @@ img {
   padding-top: 94px;
   padding-bottom: 94px;
   margin: 0 auto;
+  min-width: 320px;
+  max-width: 480px;
 }
 .portfolio__filter-list {
   justify-content: center;

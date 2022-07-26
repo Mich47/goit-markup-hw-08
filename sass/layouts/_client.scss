@@ -1,15 +1,37 @@
 /* Client Section Styles */
 
 .client {
-  @include section();
-
-  &__title {
-    margin-bottom: 50px;
+  @include section(60px);
+  
+  @include mq(tab) {
+    max-width: 768px;
   }
 
-  &__list {
-    justify-content: space-between;
-    align-items: center;
+  @include mq(desk) {
+    @include section(default);
+    max-width: 1200px;
+  }
+}
+
+.client__title {
+  margin-bottom: 30px;
+
+  @include mq(desk) {
+    margin-bottom: 50px;
+  }
+}
+
+.client__item {
+  @media screen and (min-width: 340px) {
+    --grid-items: 2;
+  }
+
+  @include mq(tab) {
+    --grid-items: 3;
+  }
+
+  @include mq(desk) {
+    --grid-items: 6;
   }
 }
 
@@ -17,8 +39,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 170px;
-  min-height: 92px;
+  padding: 15px;
 
   color: var(--social-link-color);
   border: 1px solid;

@@ -2,6 +2,7 @@
 
 .product {
   @include section(0, default);
+  max-width: 1200px;
   display: none;
 
   @include mq(desk) {
