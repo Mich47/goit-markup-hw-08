@@ -407,7 +407,7 @@ img {
 
 /* Title Styles */
 .title {
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.17;
   font-weight: 700;
   letter-spacing: 0.03em;
@@ -988,7 +988,7 @@ img {
 .hero__title {
   margin-bottom: 30px;
   font-size: 26px;
-  line-height: 42px;
+  line-height: 1.62;
   font-weight: 900;
   letter-spacing: 0.06em;
   text-align: center;
@@ -1143,6 +1143,7 @@ img {
 @media screen and (min-width: 1200px) {
   .client__title {
     margin-bottom: 50px;
+    font-size: 36px;
   }
 }
 
