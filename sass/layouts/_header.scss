@@ -4,11 +4,19 @@
   @include section(null);
 
   border-bottom: 1px solid var(--header-border-color);
+}
 
-  &__list {
-    flex-shrink: 0;
-    gap: 50px;
-  }
+.header__wrapper {
+  margin-left: 93px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__list {
+  flex-shrink: 0;
+  gap: 50px;
 }
 
 .header__link {

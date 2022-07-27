@@ -548,11 +548,48 @@ img {
   justify-content: center;
 }
 
-.container__wrapper {
-  display: flex;
+.contact {
+  flex-wrap: wrap;
+  gap: 10px;
+}
+@media screen and (min-width: 1200px) {
+  .contact {
+    flex-wrap: nowrap;
+    gap: 30px;
+  }
+}
+.contact--in-column {
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 90px;
+  gap: 9px;
+}
+@media screen and (min-width: 1200px) {
+  .contact--in-column {
+    align-items: flex-start;
+  }
+}
+
+.contact__link {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  font-style: normal;
+  color: var(--second-font-color);
+  transition: color var(--animation);
+}
+.contact__link:hover, .contact__link:focus {
+  color: var(--main-accent-color);
+}
+.contact__link--light, .contact__link--light:hover, .contact__link--light:focus {
+  color: var(--main-light-color);
+}
+.contact__link--translucent {
+  color: var(--address-link-color);
 }
 
 /* Form Styles */
@@ -835,6 +872,15 @@ img {
   margin: 0 auto;
   border-bottom: 1px solid var(--header-border-color);
 }
+
+.header__wrapper {
+  margin-left: 93px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .header__list {
   flex-shrink: 0;
   gap: 50px;
@@ -907,32 +953,6 @@ img {
   .footer__item {
     align-items: flex-start;
   }
-}
-
-.footer__contact-list {
-  flex-direction: column;
-  align-items: center;
-  gap: 9px;
-}
-@media screen and (min-width: 1200px) {
-  .footer__contact-list {
-    align-items: flex-start;
-  }
-}
-
-.footer__contact-link {
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  font-style: normal;
-  color: var(--address-link-color);
-  transition: color var(--animation);
-}
-.footer__contact-link:hover, .footer__contact-link:focus {
-  color: var(--main-accent-color);
-}
-.footer__contact-link--light, .footer__contact-link--light:hover, .footer__contact-link--light:focus {
-  color: var(--main-light-color);
 }
 
 .footer__title {
