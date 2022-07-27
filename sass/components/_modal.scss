@@ -2,10 +2,11 @@
 
 .modal {
   position: absolute;
-  min-width: 528px;
   left: 50%;
   top: 50%;
   padding: 40px;
+  min-width: 290px;
+  width: 450px;
 
   background-color: var(--main-light-color);
   box-shadow: var(--modal-box-shadow);
@@ -13,6 +14,13 @@
 
   transform: translate(-50%, -50%) scale(1);
   transition: transform var(--animation);
+  @media screen and (max-width: 480px) {
+    width: calc(100vw - 30px);
+  }
+
+  @include mq(desk) {
+    width: 528px;
+  }
 
   .backdrop.is-hidden & {
     transform: translate(-50%, -50%) scale(0.9);

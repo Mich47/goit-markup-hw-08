@@ -2,22 +2,22 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
 
-  .checkbox__label {
-    position: relative;
-    margin-left: 23px;
-    margin-bottom: 0;
+.checkbox__label {
+  position: relative;
+  margin-left: 23px;
+  margin-bottom: 0;
 
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
-  }
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-align: left;
 }
 
 .checkbox__custom {
   position: absolute;
-  top: 4px;
+  top: 0;
   left: -23px;
   width: 16px;
   height: 15px;
