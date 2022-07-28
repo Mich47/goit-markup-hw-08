@@ -14,14 +14,17 @@
 }
 
 .header__wrapper {
-  margin-left: 93px;
-  width: 100%;
   display: none;
-  align-items: center;
-  justify-content: space-between;
 
   @include mq(tab) {
+    width: 100%;
+    margin-left: 93px;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  @include mq(desk) {
   }
 }
 
@@ -37,8 +40,19 @@
   }
 }
 
-.header_burger-icon {
+.header__burger-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
   @include mq(tab) {
     display: none;
+  }
+
+  .header__burger-icon {
+    .header__burger-btn:hover &,
+    .header__burger-btn:focus & {
+      fill: var(--main-accent-color);
+    }
   }
 }

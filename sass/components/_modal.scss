@@ -4,9 +4,11 @@
   position: absolute;
   left: 50%;
   top: 50%;
+  // z-index: 100;
   padding: 40px;
   min-width: 290px;
   width: 450px;
+  overflow-y: scroll;
 
   background-color: var(--main-light-color);
   box-shadow: var(--modal-box-shadow);
