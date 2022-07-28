@@ -3,7 +3,6 @@
 
 // Utils
 @import './utils/modern-normalize';
-@import './utils/hidden';
 @import './utils/variables';
 @import './utils/mixin';
 
@@ -19,6 +18,7 @@
 @import './components/checkbox';
 @import './components/client-link';
 @import './components/container';
+@import './components/navigation';
 @import './components/contact';
 @import './components/form';
 @import './components/logo';
@@ -36,3 +36,6 @@
 @import './layouts/team';
 @import './layouts/client';
 @import './layouts/portfolio';
+
+// Hidden
+@import './utils/hidden';

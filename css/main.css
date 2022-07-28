@@ -299,20 +299,6 @@ summary {
   display: list-item;
 }
 
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  -webkit-clip-path: inset(100%);
-          clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
 :root {
   --main-font: "Roboto", sans-serif;
   --logo-font: "Raleway", sans-serif;
@@ -368,6 +354,7 @@ body {
 
 .no-scroll {
   overflow: hidden;
+  padding-right: 16px;
 }
 
 /* Reset Styles */
@@ -440,11 +427,6 @@ img {
   opacity: 1;
   visibility: visible;
   transition: visibility var(--animation), opacity var(--animation);
-}
-.backdrop--is-hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
 }
 
 /* Button Styles */
@@ -548,13 +530,49 @@ img {
   justify-content: center;
 }
 
+.navigation {
+  flex-shrink: 0;
+  gap: 50px;
+}
+
+.navigation__link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 32px 0;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  color: var(--main-font-color);
+  transition: color var(--animation);
+}
+.navigation__link:hover, .navigation__link:focus {
+  color: var(--main-accent-color);
+}
+.navigation__link--color-grey {
+  color: var(--second-font-color);
+}
+.navigation__link--current {
+  color: var(--main-accent-color);
+}
+.navigation__link--current::after {
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 4px;
+  content: "";
+  background-color: var(--main-accent-color);
+  border-radius: 2px;
+}
+
 .contact {
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 10px;
 }
 @media screen and (min-width: 1200px) {
   .contact {
-    flex-wrap: nowrap;
+    flex-direction: row;
     gap: 30px;
   }
 }
@@ -590,6 +608,13 @@ img {
 }
 .contact__link--translucent {
   color: var(--address-link-color);
+}
+
+@media screen and (min-width: 1200px) {
+  .contact__icon {
+    width: 16px;
+    height: 16px;
+  }
 }
 
 /* Form Styles */
@@ -873,49 +898,42 @@ img {
   border-bottom: 1px solid var(--header-border-color);
 }
 
+@media screen and (max-width: 767.98px) {
+  .header__container {
+    padding: 16px 15px;
+    justify-content: space-between;
+  }
+}
+
 .header__wrapper {
   margin-left: 93px;
   width: 100%;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: space-between;
 }
-
-.header__list {
-  flex-shrink: 0;
-  gap: 50px;
+@media screen and (min-width: 768px) {
+  .header__wrapper {
+    display: flex;
+  }
 }
 
-.header__link {
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 32px 0;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  color: var(--main-font-color);
-  transition: color var(--animation);
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .header__contact-link {
+    font-size: 12px;
+    line-height: 1.17;
+  }
 }
-.header__link:hover, .header__link:focus {
-  color: var(--main-accent-color);
+@media screen and (min-width: 1200px) {
+  .header__contact-link {
+    padding: 26px 0;
+  }
 }
-.header__link--color-grey {
-  color: var(--second-font-color);
-}
-.header__link--current {
-  color: var(--main-accent-color);
-}
-.header__link--current::after {
-  position: absolute;
-  left: 0;
-  bottom: -1px;
-  width: 100%;
-  height: 4px;
-  content: "";
-  background-color: var(--main-accent-color);
-  border-radius: 2px;
+
+@media screen and (min-width: 768px) {
+  .header_burger-icon {
+    display: none;
+  }
 }
 
 /* Footer Styles*/
@@ -1308,4 +1326,24 @@ img {
   color: var(--main-light-color);
   box-shadow: var(--filter-btn-box-shadow);
   background-color: var(--btn-background-color);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }/*# sourceMappingURL=main.css.map */

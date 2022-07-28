@@ -1,12 +1,10 @@
 .contact {
-  //   flex-direction: column;
-  //   align-items: center;
   //   flex-shrink: 0;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 10px;
 
   @include mq(desk) {
-    flex-wrap: nowrap;
+    flex-direction: row;
     gap: 30px;
   }
 
@@ -50,5 +48,12 @@
 
   &--translucent {
     color: var(--address-link-color);
+  }
+}
+
+.contact__icon {
+  @include mq(desk) {
+    width: 16px;
+    height: 16px;
   }
 }
