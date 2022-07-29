@@ -1,16 +1,16 @@
 .mobile-menu {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
-  z-index: 20;
-  width: 100%;
+  z-index: 50;
+  width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 15px;
 
-  background-color: lightblue;
+  background-color: var(--main-light-color);
 
   @include mq(tab) {
     display: none;
@@ -24,12 +24,25 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+  transition: color var(--animation);
 
   @include mq(tab) {
     display: none;
   }
+
+  &:hover,
+  &:focus {
+    color: var(--main-accent-color);
+  }
 }
 
 .mobile-menu__navigation {
-  padding-top: 48px;
+  margin-top: 36px;
+}
+
+.mobile-menu__social-list {
+  margin-top: 40px;
+  justify-content: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
 }

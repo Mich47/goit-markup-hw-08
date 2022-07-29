@@ -8,8 +8,10 @@
     gap: 30px;
   }
 
-  &--reverse {
+  &--mobile-reverse {
+    display: inline-flex;
     flex-direction: column-reverse;
+    gap: 8px;
   }
 
   &--in-column {
@@ -44,13 +46,18 @@
   }
 
   &--large {
-    // padding: 0;
+    padding: 12px 0;
     color: var(--main-accent-color);
     font-size: 34px;
     line-height: 1.18;
+
+    @media screen and (max-width: 340px) {
+      font-size: 30px;
+    }
   }
 
   &--small {
+    padding: 12px 0;
     font-size: 24px;
     line-height: 1.17;
   }

@@ -45,14 +45,14 @@
   border: none;
   cursor: pointer;
 
+  transition: color var(--animation);
+
   @include mq(tab) {
     display: none;
   }
 
-  .header__burger-icon {
-    .header__burger-btn:hover &,
-    .header__burger-btn:focus & {
-      fill: var(--main-accent-color);
-    }
+  &:hover,
+  &:focus {
+    color: var(--main-accent-color);
   }
 }
