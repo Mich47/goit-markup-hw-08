@@ -1,32 +1,25 @@
 (() => {
-  const menuBtnRef = document.querySelector('[data-menu-open]');
-  const mobileMenuRef = document.querySelector('[data-menu]');
-  const body = document.querySelector('[data-body]');
+  const mobileMenu = document.querySelector('.js-menu-container');
+  const openMenuBtn = document.querySelector('.js-open-menu');
+  const closeMenuBtn = document.querySelector('.js-close-menu');
 
-  menuBtnRef.addEventListener('click', () => {
-    const expanded = menuBtnRef.getAttribute('aria-expanded') === 'true' || false;
+  const toggleMenu = () => {
+    const isMenuOpen = openMenuBtn.getAttribute('aria-expanded') === 'true' || false;
+    openMenuBtn.setAttribute('aria-expanded', !isMenuOpen);
+    mobileMenu.classList.toggle('is-open');
 
-    menuBtnRef.classList.toggle('is-open');
-    menuBtnRef.setAttribute('aria-expanded', !expanded);
+    const scrollLockMethod = !isMenuOpen ? 'disableBodyScroll' : 'enableBodyScroll';
+    bodyScrollLock[scrollLockMethod](document.body);
+  };
 
-    mobileMenuRef.classList.toggle('is-open');
-    body.classList.toggle('no-scroll');
+  openMenuBtn.addEventListener('click', toggleMenu);
+  closeMenuBtn.addEventListener('click', toggleMenu);
+
+  // Close the mobile menu on wider screens if the device orientation changes
+  window.matchMedia('(min-width: 768px)').addEventListener('change', e => {
+    if (!e.matches) return;
+    mobileMenu.classList.remove('is-open');
+    openMenuBtn.setAttribute('aria-expanded', false);
+    bodyScrollLock.enableBodyScroll(document.body);
   });
 })();
-
-// (() => {
-//   const refs = {
-//     openModalBtn: document.querySelector('[data-menu-open]'),
-//     closeModalBtn: document.querySelector('[data-menu-close]'),
-//     modal: document.querySelector('[data-menu-modal]'),
-//     body: document.querySelector('[data-body]'),
-//   };
-
-//   refs.openModalBtn.addEventListener('click', toggleModal);
-//   refs.closeModalBtn.addEventListener('click', toggleModal);
-
-//   function toggleModal() {
-//     refs.modal.classList.toggle('is-hidden');
-//     refs.body.classList.toggle('no-scroll');
-//   }
-// })();

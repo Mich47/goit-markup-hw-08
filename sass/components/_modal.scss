@@ -1,13 +1,15 @@
 /* Modal Styles */
 
 .modal {
-  position: absolute;
+  position: fixed;
   left: 50%;
   top: 50%;
-  // z-index: 100;
+  z-index: 100;
   padding: 40px;
+
   min-width: 290px;
   width: 450px;
+  height: auto;
   overflow-y: scroll;
 
   background-color: var(--main-light-color);
@@ -16,6 +18,7 @@
 
   transform: translate(-50%, -50%) scale(1);
   transition: transform var(--animation);
+
   @media screen and (max-width: 480px) {
     width: calc(100vw - 30px);
   }

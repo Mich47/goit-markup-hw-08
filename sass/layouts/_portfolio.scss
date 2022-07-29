@@ -1,11 +1,27 @@
 /* Portfolio Section Styles */
 
 .portfolio {
-  @include section();
+  @include section(60px);
 
-  &__filter-list {
+  @include mq(desk) {
+    @include section();
+  }
+}
+
+.portfolio__filter-list {
+  justify-content: flex-start;
+  gap: 8px;
+  margin-bottom: 30px;
+
+  @include mq(mob-only) {
+    max-width: 432px;
+  }
+
+  @include mq(tab) {
     justify-content: center;
-    gap: 8px;
+  }
+
+  @include mq(desk) {
     margin-bottom: 50px;
   }
 }
@@ -32,5 +48,15 @@
     color: var(--main-light-color);
     box-shadow: var(--filter-btn-box-shadow);
     background-color: var(--btn-background-color);
+  }
+}
+
+.portfolio__item {
+  @include mq(tab) {
+    --grid-items: 2;
+  }
+
+  @include mq(desk) {
+    --grid-items: 3;
   }
 }
