@@ -781,7 +781,7 @@ img {
   min-width: 290px;
   width: 450px;
   height: auto;
-  overflow-y: scroll;
+  overflow-y: auto;
   background-color: var(--main-light-color);
   box-shadow: var(--modal-box-shadow);
   border-radius: 4px;
