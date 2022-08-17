@@ -780,7 +780,7 @@ img {
   padding: 40px;
   min-width: 290px;
   width: 450px;
-  height: auto;
+  max-height: 100%;
   overflow-y: auto;
   background-color: var(--main-light-color);
   box-shadow: var(--modal-box-shadow);

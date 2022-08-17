@@ -11,10 +11,4 @@
   opacity: 1;
   visibility: visible;
   transition: visibility var(--animation), opacity var(--animation);
-
-  // &--is-hidden {
-  //   opacity: 0;
-  //   visibility: hidden;
-  //   pointer-events: none;
-  // }
 }
